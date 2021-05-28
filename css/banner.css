@@ -1,0 +1,157 @@
+html {
+    scroll-behavior:smooth;
+    /*filter: grayscale(1);!*网页变黑白*!*/
+}
+
+/*定义css变量*/
+:root {
+    --yanse--:#fff;
+}
+
+.box-banner{
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 445px;
+    overflow: hidden;
+}
+
+
+.box-banner .banner-wrap {
+    /*width: 500%;*/
+    height: 100%;
+    display: flex;
+    transition: 500ms all linear;
+}
+
+.box-banner .banner-wrap a{
+    /*width: 1519px;*/
+    height: 445px;
+    /*position: absolute;*/
+    background: center/cover;
+    display: block;
+}
+
+.box-banner .arrow {
+    position: absolute;
+    z-index: 10;
+    /*opacity: 0.2;*/
+    width: 60px;
+    height: 120px;
+    background: black;
+    /*display: none;*/
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.box-banner .small-arrow-left {
+    top: 50%;
+}
+
+.box-banner .small-arrow-right {
+    top: 50%;
+    right: 0;
+
+}
+.box-banner .small-arrow-left:before,
+.box-banner .small-arrow-right:before {
+    content: '1';
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+}
+
+.box-banner .small-arrow-left:before{
+    background: url(../images/sprite.png) 0 -913px;
+}
+
+.box-banner .small-arrow-right:before {
+    background: url(../images/sprite.png) 0 -1036px;
+}
+
+
+.box-banner .download {
+    /*width: 100%;*/
+    height: 60px;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 30;
+    line-height: 60px;
+    text-align: center;
+}
+.box-banner .download a{
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+}
+.box-banner .download a i{
+    width: 24px;
+    height: 24px;
+    /*background: red;*/
+    position: absolute;
+    top: 20px;
+    left: 110px;
+    background: no-repeat;
+}
+
+.box-banner .download a .pc{
+    background: url("../images/pc.png");
+}
+.box-banner .download a .iPhone{
+    background: url("../images/mac.png");
+}
+.box-banner .download a .Android{
+    background: url("../images/andriod.png");
+}
+
+.box-banner .download a span{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 155px;
+}
+
+.box-banner .download a b{
+    position: absolute;
+    right: -60px;
+}
+
+/*下方小圆点*/
+.box-banner .dot {
+    position: absolute;
+    opacity: .8;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    display: flex;
+    justify-content: center;
+    z-index: 8;
+}
+
+.box-banner .dot a {
+    width: 20px;
+    height: 20px;
+    background: rgba(7, 6, 6, 0.4);
+    border-radius: 50%;
+    margin-right: 60px;
+}
+.box-banner .dot a.active {
+    background-color: rgba(255, 42, 42, 0.4);
+}
+/*上方为轮播图部分*/
+
+.btn2 {
+    width: 50px;
+    height: 50px;
+    background: url("https://staticssl.kugou.com/public/root/images/scrollTop1.png");
+    position: fixed;
+    right: 120px;
+    top: 50%;
+    display: none;
+}
